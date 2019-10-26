@@ -56,11 +56,12 @@
 <span>w</span> 
 </div> 
 
-    <br><br><br><br><br>
     
-    <p id="word"></p>
+<p id="word"></p>
     
-    <br><br>
+    <button onclick="manualMode()"><p id = "buttonText"> Switch to Manual Typing Mode</p></button>
+
+<br><br>
     
     
     
@@ -112,20 +113,34 @@ function foo(items) {
    chicken = "print(5+3)"
    
     
-        var myVar = setInterval(myTimer, 300);
+var myVar = setInterval(myTimer, 300);
  
 function myTimer() {
  jQuery.get('words.txt', function(data) {
    document.getElementById('word').innerHTML = data;
-  // editor.session.replace(new ace.Range(0, 0, 1, 1), data);
-     
-     editor.session.setValue(data); 
-     
- 
-     
- });
+     editor.session.setValue(data);     
+ });  
 }
     
+
+//    function manualMode() {
+//   clearInterval(myVar);
+//        editor.setTheme("ace/theme/monokai");
+//}
+
+
+function manualMode() {
+    if (!myVar) {
+        myVar = setInterval(myTimer,300);
+          editor.setTheme("ace/theme/merbivore_soft");
+         document.getElementById("buttonText").innerHTML = "Switch to Manual Typing";
+    } else {
+        clearInterval(myVar);
+        editor.setTheme("ace/theme/monokai");
+        myVar = null;
+        document.getElementById("buttonText").innerHTML = "Switch to Parseltongue";
+    }
+}
     
       
     
