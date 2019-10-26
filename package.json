@@ -1,0 +1,45 @@
+{
+  "name": "amazon-transcribe-websocket-static",
+  "description": "A static site demonstrating real-time audio transcription via Amazon Transcribe over a WebSocket.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Amazon Web Services",
+    "email": "",
+    "url": "http://aws.amazon.com/"
+  },
+  "scripts": {
+    "build": "browserify lib/main.js -t [ envify --ACCESS_KEY AKIAYKA2MY2FI35PT7VJ --SECRET_KEY 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 ] > dist/main.js -d",
+    "test": "bash lib/protected.sh"
+  },
+  "keywords": [],
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/env"
+          ]
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "@aws-sdk/eventstream-marshaller": "0.1.0-preview.2",
+    "@aws-sdk/util-utf8-node": "0.1.0-preview.1",
+    "aws-sdk": "^2.556.0",
+    "brace": "^0.11.1",
+    "browserify": "^16.3.0",
+    "browserify-fs": "^1.0.0",
+    "fs": "0.0.1-security",
+    "local-web-server": "^3.0.6",
+    "microphone-stream": "^5.0.1",
+    "query-string": "^6.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.2",
+    "babelify": "^10.0.0",
+    "envify": "^4.1.0"
+  }
+}

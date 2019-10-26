@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Amazon Transcribe WebSocket API - Sample Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Jim+Nightshade&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <h1> Parseltongue</h1> 
+    
+
+    
+        <div class = "container"> 
+            
+            
+        <div class = "parchment">
+            
+            
+            <br><br><br>
+            <div class="text-anim">
+          <span>h</span>
+        <span>e</span>
+        <span>l</span>
+        <span>l</span>
+        <span>o</span>
+        <span>,</span>
+        <span>&nbsp; </span>
+        <span>s</span>
+        <span>p</span>
+        <span>e</span>
+        <span>a</span>
+        <span>k</span>
+        <span>&nbsp; </span>
+        <span>n</span>
+        <span>o </span>
+        <span>w</span> 
+        </div> 
+        
+            
+        <p id="word"></p>
+            
+              
+                <div class="toggle toggle--neon">
+                 
+                             
+                    <input type="checkbox" id="toggle--neon" class="toggle--checkbox">
+                    
+                    
+                    
+                    <label onclick="manualMode()" class="toggle--btn" for="toggle--neon" data-label-on="Write"  data-label-off="speak"></label>
+                  
+                </div>
+                
+            
+        <!--    <button onclick="manualMode()" class = "button"><p id = "buttonText"> Switch to Manual Typing Mode</p></button>-->
+        
+        <br><br>
+            
+            
+            
+        <div id="editor" class="editor"> print("python")</div>
+
+    <div class="container">
+        
+
+        <div id="error" class="isa_error"></div>
+
+        <textarea id="message" rows="5"
+        readonly="readonly"></textarea>
+
+        
+        <textarea id="transcript" placeholder="Press Start and speak into your mic" rows="5"
+            readonly="readonly"></textarea>
+        <div class="row">
+            <div class="col">
+                <button id="start-button" class="button-xl" title="Start Transcription">
+                    <i class="fa fa-microphone"></i> Start
+                </button>
+                <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true"><i
+                        class="fa fa-stop-circle"></i> Stop
+                </button>
+                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript"> 
+                    Clear Transcript
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="dist/main.js"></script>
+
+    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/merbivore_soft");
+    editor.session.setMode("ace/mode/python");
+   
+    
+ tempString = "x = 5 \ny = 3 \n print(x+y)"
+var myVar = setInterval(myTimer, 300)
+ 
+    
+
+function myTimer() {
+ jQuery.get('words.txt', function(data) {
+  // document.getElementById('word').innerHTML = data;
+     //editor.session.setValue(tempString);     
+ });  
+}
+    
+
+//    function manualMode() {
+//   clearInterval(myVar);
+//        editor.setTheme("ace/theme/monokai");
+//}
+
+
+
+
+function manualMode() {
+    if (!myVar) {
+      
+        myVar = setInterval(myTimer,300);
+        
+        code = editor.getValue();
+        tempString = code;
+        editor.session.setValue(tempString);  
+
+   
+        
+        
+          editor.setTheme("ace/theme/merbivore_soft");
+        
+    } else {
+        clearInterval(myVar);
+        editor.setTheme("ace/theme/monokai");
+        
+        myVar = null;
+     
+    }
+}
+    
+      
+    
+</script>
+</body>
+
+</html>

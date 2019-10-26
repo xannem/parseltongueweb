@@ -1,0 +1,304 @@
+@mixin anim-filter($filter, $value) {
+    -webkit-filter: #{$filter}unquote("(#{$value})");
+      -moz-filter: #{$filter}unquote("(#{$value})");
+      -ms-filter: #{$filter}unquote("(#{$value})");
+      filter: #{$filter}unquote("(#{$value})"); 
+}
+@mixin anim-transition($property, $value) {
+  -webkit-transition: $property, $value;
+      -moz-transition: $property, $value;
+      -ms-transition: $property, $value;
+      transition: $property, $value;
+}
+@mixin anim-transform($property, $value) {
+    -webkit-transform:  #{$property}unquote("(#{$value})");
+      -moz-transform: #{$property}unquote("(#{$value})");
+      -ms-transform: #{$property}unquote("(#{$value})");
+      transform: #{$property}unquote("(#{$value})"); 
+}
+
+
+body {
+background-color: #191C19;
+    text-align: center;
+    
+    
+    
+}
+ 
+
+
+
+
+
+.parchment {
+     margin: auto;
+  width: 80%;
+    
+    height:1100px;
+    background-image: url(images/containerP.png); 
+    background-repeat: no-repeat;
+background-size:contain;
+    background-position: center top;
+     padding:30px;
+}
+
+.parchment p {
+    
+    font-size: 24px;
+    font-family: 'Jim Nightshade', cursive;
+
+}
+
+h1 {
+font-family: 'UnifrakturMaguntia', cursive;
+color:whitesmoke; 
+ font-size: 62px;
+}
+
+
+
+/*********** BUTTON *************************/ 
+
+
+
+
+
+.button {
+  all:unset;
+    
+  
+}
+
+
+
+.text-anim {
+font-size: 24px;
+font-family: 'Jim Nightshade', cursive;
+font-weight: 400;
+}
+
+
+
+/* ===================================================== Some defaults across all toggle demos ===================================================== */
+ .toggle {
+	 display: block;
+	 text-align: center;
+	 margin-top: 40px;
+	 user-select: none;
+}
+ .toggle--checkbox {
+	 display: none;
+}
+ .toggle--btn {
+	 display: block;
+	 margin: 0 auto;
+	 font-size: 1.4em;
+	 transition: all 350ms ease-in;
+}
+ .toggle--btn:hover {
+	 cursor: pointer;
+}
+ .toggle--btn, .toggle--checkbox, .toggle--feature, .toggle--btn:before, .toggle--checkbox:before, .toggle--feature:before, .toggle--btn:after, .toggle--checkbox:after, .toggle--feature:after {
+	 transition: all 250ms ease-in;
+}
+ .toggle--btn:before, .toggle--checkbox:before, .toggle--feature:before, .toggle--btn:after, .toggle--checkbox:after, .toggle--feature:after {
+	 content: '';
+	 display: block;
+}
+/* ====================================================== Neon toggle ====================================================== */
+ @keyframes neon {
+	 0% {
+		 text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 40px #f90, 0 0 70px #f90, 0 0 90px #f90, 0 0 90px #f90;
+	}
+	 100% {
+		 text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f90, 0 0 35px #f90, 0 0 40px #f90, 0 0 50px #f90;
+	}
+}
+ .toggle--neon {
+/*	 margin-top: 0;*/
+}
+ .toggle--neon .toggle--btn {
+	   font-family: 'Jim Nightshade', cursive;
+
+	 text-transform: uppercase;
+	 font-size: 50px;
+	 color: #333;
+	 text-shadow: 0 0 10px transparent, 0 0 15px transparent, 0 0 25px transparent, 0 0 40px transparent, 0 0 70px transparent, 0 0 90px transparent, 0 0 90px transparent;
+}
+ .toggle--neon .toggle--btn:before, .toggle--neon .toggle--btn:after {
+	 display: inline-block;
+	 margin: 0 20px;
+	 transition: all 220ms ease-in-out;
+}
+ .toggle--neon .toggle--btn:before {
+	 content: attr(data-label-off);
+	 animation: neon 1.5s ease-in-out infinite alternate;
+	 animation-delay: 90ms;
+	 color: #f1f1f1;
+}
+ .toggle--neon .toggle--btn:after {
+	 content: attr(data-label-on);
+}
+ .toggle--neon .toggle--checkbox:checked + .toggle--btn:before {
+	 animation: none;
+	 color: #333;
+}
+ .toggle--neon .toggle--checkbox:checked + .toggle--btn:after {
+	 animation: neon 1.5s ease-in-out infinite alternate;
+	 animation-delay: 90ms;
+	 color: #f1f1f1;
+}
+
+#editor { 
+    height:500px;
+    max-width:700px;
+    margin:auto;
+    
+    }
+
+#word {
+    display: none;
+}
+
+/* ==========================================================================
+	 Main Animation	 ========================================================================== */
+     .text-anim span {
+        opacity: 0;
+        transition: all, 550ms;
+        -webkit-filter: blur(25px);
+        -moz-filter: blur(25px);
+        -ms-filter: blur(25px);
+        filter: blur(25px);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      .text-anim span:nth-child(22) {
+        transition-delay: 770ms;
+      }
+      .text-anim span:nth-child(21) {
+        transition-delay: 735ms;
+      }
+      .text-anim span:nth-child(20) {
+        transition-delay: 700ms;
+      }
+      .text-anim span:nth-child(19) {
+        transition-delay: 665ms;
+      }
+      .text-anim span:nth-child(18) {
+        transition-delay: 630ms;
+      }
+      .text-anim span:nth-child(17) {
+        transition-delay: 595ms;
+      }
+      .text-anim span:nth-child(16) {
+        transition-delay: 560ms;
+      }
+      .text-anim span:nth-child(15) {
+        transition-delay: 525ms;
+      }
+      .text-anim span:nth-child(14) {
+        transition-delay: 490ms;
+      }
+      .text-anim span:nth-child(13) {
+        transition-delay: 455ms;
+      }
+      .text-anim span:nth-child(12) {
+        transition-delay: 420ms;
+      }
+      .text-anim span:nth-child(11) {
+        transition-delay: 385ms;
+      }
+      .text-anim span:nth-child(10) {
+        transition-delay: 350ms;
+      }
+      .text-anim span:nth-child(9) {
+        transition-delay: 315ms;
+      }
+      .text-anim span:nth-child(8) {
+        transition-delay: 280ms;
+      }
+      .text-anim span:nth-child(7) {
+        transition-delay: 245ms;
+      }
+      .text-anim span:nth-child(6) {
+        transition-delay: 210ms;
+      }
+      .text-anim span:nth-child(5) {
+        transition-delay: 175ms;
+      }
+      .text-anim span:nth-child(4) {
+        transition-delay: 140ms;
+      }
+      .text-anim span:nth-child(3) {
+        transition-delay: 105ms;
+      }
+      .text-anim span:nth-child(2) {
+        transition-delay: 70ms;
+      }
+      .text-anim span:nth-child(1) {
+        transition-delay: 35ms;
+      }
+      
+      .text-anim.animate span {
+        opacity: 1;
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+      }
+      
+      
+      
+
+      
+
+
+/* -------------------------------------------- */
+body {
+    margin: 20px;
+}
+
+#transcript {
+    margin: 30px 0;
+    white-space: pre-wrap;
+}
+
+#start-button,
+#stop-button {
+    margin: 5px 0;
+}
+
+#error {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.4rem;
+    border-radius: 5px 5px 5px 5px;
+    color: #D8000C;
+    background-color: #FFD2D2;
+    display: none;
+}
+
+.isa_error i {
+    margin: 2px 12px;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+#logo {
+    height: 52px;
+}
+
+#github {
+    fill: #146eb4;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
