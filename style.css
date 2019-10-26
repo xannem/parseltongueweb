@@ -7,6 +7,9 @@ background-color: #191C19;
 }
  
 
+.container {
+ 
+}
 .parchment {
      margin: auto;
   width: 80%;
@@ -15,17 +18,19 @@ background-color: #191C19;
     background-repeat: no-repeat;
 background-size:contain;
     background-position: center top;
-   
      padding:20px;
-    
-    
 }
 
 .parchment p {
     
-    font-size: 16px;
+    font-size: 24px;
+    font-family: 'Jim Nightshade', cursive;
+    
+ 
     
 }
+
+
 h1 {
 font-family: 'UnifrakturMaguntia', cursive;
 color:whitesmoke; 
