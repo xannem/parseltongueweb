@@ -47,12 +47,8 @@ background-size:contain;
     
     font-size: 24px;
     font-family: 'Jim Nightshade', cursive;
-    
-    
- 
-    
-}
 
+}
 
 h1 {
 font-family: 'UnifrakturMaguntia', cursive;
@@ -60,12 +56,100 @@ color:whitesmoke;
  font-size: 62px;
 }
 
-.text-anim {
+
+
+/*********** BUTTON *************************/ 
+
+
+
+
+
+.button {
+  all:unset;
+    
   
-font-size: 24px;
-    font-family: 'Jim Nightshade', cursive;
-  font-weight: 400;
 }
+
+
+
+.text-anim {
+font-size: 24px;
+font-family: 'Jim Nightshade', cursive;
+font-weight: 400;
+}
+
+
+
+/* ===================================================== Some defaults across all toggle demos ===================================================== */
+ .toggle {
+	 display: block;
+	 text-align: center;
+	 margin-top: 40px;
+	 user-select: none;
+}
+ .toggle--checkbox {
+	 display: none;
+}
+ .toggle--btn {
+	 display: block;
+	 margin: 0 auto;
+	 font-size: 1.4em;
+	 transition: all 350ms ease-in;
+}
+ .toggle--btn:hover {
+	 cursor: pointer;
+}
+ .toggle--btn, .toggle--checkbox, .toggle--feature, .toggle--btn:before, .toggle--checkbox:before, .toggle--feature:before, .toggle--btn:after, .toggle--checkbox:after, .toggle--feature:after {
+	 transition: all 250ms ease-in;
+}
+ .toggle--btn:before, .toggle--checkbox:before, .toggle--feature:before, .toggle--btn:after, .toggle--checkbox:after, .toggle--feature:after {
+	 content: '';
+	 display: block;
+}
+/* ====================================================== Neon toggle ====================================================== */
+ @keyframes neon {
+	 0% {
+		 text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 40px #f90, 0 0 70px #f90, 0 0 90px #f90, 0 0 90px #f90;
+	}
+	 100% {
+		 text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f90, 0 0 35px #f90, 0 0 40px #f90, 0 0 50px #f90;
+	}
+}
+ .toggle--neon {
+/*	 margin-top: 0;*/
+}
+ .toggle--neon .toggle--btn {
+	   font-family: 'Jim Nightshade', cursive;
+
+	 text-transform: uppercase;
+	 font-size: 50px;
+	 color: #333;
+	 text-shadow: 0 0 10px transparent, 0 0 15px transparent, 0 0 25px transparent, 0 0 40px transparent, 0 0 70px transparent, 0 0 90px transparent, 0 0 90px transparent;
+}
+ .toggle--neon .toggle--btn:before, .toggle--neon .toggle--btn:after {
+	 display: inline-block;
+	 margin: 0 20px;
+	 transition: all 220ms ease-in-out;
+}
+ .toggle--neon .toggle--btn:before {
+	 content: attr(data-label-off);
+	 animation: neon 1.5s ease-in-out infinite alternate;
+	 animation-delay: 90ms;
+	 color: #f1f1f1;
+}
+ .toggle--neon .toggle--btn:after {
+	 content: attr(data-label-on);
+}
+ .toggle--neon .toggle--checkbox:checked + .toggle--btn:before {
+	 animation: none;
+	 color: #333;
+}
+ .toggle--neon .toggle--checkbox:checked + .toggle--btn:after {
+	 animation: neon 1.5s ease-in-out infinite alternate;
+	 animation-delay: 90ms;
+	 color: #f1f1f1;
+}
+
 
 
 /* ==========================================================================
@@ -76,8 +160,6 @@ font-size: 24px;
     height:500px;
     max-width:700px;
     margin:auto;
-    
-
     
     }
 
@@ -172,3 +254,6 @@ font-size: 24px;
   -ms-filter: blur(0px);
   filter: blur(0px);
 }
+
+
+

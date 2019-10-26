@@ -1,11 +1,14 @@
-print(5 + 133 + 13 + 112321312 + 20)
-print(4+1)
-
-print(5+1)
-print("THIS IS A TEXTING IESTING TESTINaspoifpsaiaoisipoiopoipipooG")
-
-print(3+1)
-print(5+1)
-print("THIS IS A TEXTING IESTING TESTINaspoifpsaiaoisipoiopoipipooG")
-
-print(5+1)
+def names_are_back(lists):
+    #YOUR CODE GOES HERE
+    res_list = [x[0] for x in lists]
+    next_lst = [x[1] for x in lists]
+    pistachio = {}
+    key = "name"
+    pistachio.setdefault(key, [])
+    for i in res_list:
+    	pistachio[key].append(i)
+    key2 = "age"
+    pistachio.setdefault(key2, [])
+    for y in next_lst:
+    	pistachio[key2].append(y)
+    return pistachio

@@ -59,7 +59,20 @@
     
 <p id="word"></p>
     
-    <button onclick="manualMode()"><p id = "buttonText"> Switch to Manual Typing Mode</p></button>
+      
+		<div class="toggle toggle--neon">
+         
+                     
+			<input type="checkbox" id="toggle--neon" class="toggle--checkbox">
+            
+            
+            
+			<label onclick="manualMode()" class="toggle--btn" for="toggle--neon" data-label-on="Write"  data-label-off="speak"></label>
+          
+		</div>
+        
+    
+<!--    <button onclick="manualMode()" class = "button"><p id = "buttonText"> Switch to Manual Typing Mode</p></button>-->
 
 <br><br>
     
@@ -113,12 +126,15 @@ function foo(items) {
    chicken = "print(5+3)"
    
     
-var myVar = setInterval(myTimer, 300);
+ tempString = "x = 5 \ny = 3 \n print(x+y)"
+var myVar = setInterval(myTimer, 300)
  
+    
+
 function myTimer() {
  jQuery.get('words.txt', function(data) {
-   document.getElementById('word').innerHTML = data;
-     editor.session.setValue(data);     
+  // document.getElementById('word').innerHTML = data;
+     editor.session.setValue(tempString);     
  });  
 }
     
@@ -129,16 +145,25 @@ function myTimer() {
 //}
 
 
+
+
 function manualMode() {
     if (!myVar) {
+      
         myVar = setInterval(myTimer,300);
+        
+        code = editor.getValue();
+        tempString = code;
+        
+          editor.session.setValue(tempString);  
           editor.setTheme("ace/theme/merbivore_soft");
-         document.getElementById("buttonText").innerHTML = "Switch to Manual Typing";
+        
     } else {
         clearInterval(myVar);
         editor.setTheme("ace/theme/monokai");
+        
         myVar = null;
-        document.getElementById("buttonText").innerHTML = "Switch to Parseltongue";
+     
     }
 }
     
