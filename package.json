@@ -8,7 +8,6 @@
     "url": "http://aws.amazon.com/"
   },
   "scripts": {
-    "build": "browserify lib/main.js -t [ envify --ACCESS_KEY AKIAYKA2MY2FI35PT7VJ --SECRET_KEY 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 ] > dist/main.js -d",
     "test": "bash lib/protected.sh"
   },
   "keywords": [],
