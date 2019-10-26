@@ -6,8 +6,15 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     
+
+<script>
+
+</script>
     
 
+    
+    
+    
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap" rel="stylesheet"> 
@@ -48,15 +55,33 @@
 <span>o </span>
 <span>w</span> 
 </div> 
-    
-    
-    
 
+    <br><br><br>
+ 
+    
+    
+    
+<div id="editor">
     
     
     
     
-     </div>
+function foo(items) {
+    var i;
+    for (i = 0; i &lt; items.length; i++) {
+        alert("Ace Rocks " + items[i]);
+    }
+}
+
+=
+
+}</div>
+  
+    
+    
+    
+    
+     </div> 
     
 </div>
     
@@ -73,7 +98,46 @@
     
     
     
-      <script  src="script.js"></script>
+<script  src="script.js"></script>
+<script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/merbivore_soft");
+    editor.session.setMode("ace/mode/python"); 
+   chicken = "print(5+3)"
+   
+    
+        var myVar = setInterval(myTimer, 300);
+ 
+function myTimer() {
+ jQuery.get('words.txt', function(data) {
+   document.getElementById('word').innerHTML = data;
+  // editor.session.replace(new ace.Range(0, 0, 1, 1), data);
+     
+     editor.session.setValue(data); 
+ });
+}
+    
+    editor.insert(stringPut);
+    
+      
+    
+</script>
+    
+
+    
+<!--Themes: 
+monokai 
+tomorrow_night_bright
+tomorrow_night_eighties
+merbivore_soft
+idle_fingers
+
+!--> 
+
+    
+    
 
 </body>
 </html>

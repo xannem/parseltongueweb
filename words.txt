@@ -1,0 +1,7 @@
+print(5 + 133 + 13 + 112321312 + 20)
+print(4+1)
+
+print(5+1)
+print("THIS IS A TEXTING IESTING TESTINaspoifpsaiaoisipoiopoipipooG")
+
+
