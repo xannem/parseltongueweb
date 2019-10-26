@@ -1,0 +1,26 @@
+body {
+background-color: #191C19;
+    text-align: center;
+    
+    
+    
+}
+.container {
+ background-color: #8D8080; 
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+    font-size: 22px;
+    
+ 
+  
+ 
+   
+    
+}
+
+h1 {
+font-family: 'UnifrakturMaguntia', cursive;
+color:whitesmoke; 
+ font-size: 62px;
+}
