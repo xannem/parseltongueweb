@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
     <link rel="stylesheet" href="styles.css">
-
+ <link rel="stylesheet" href="styleBook.css">
     <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade&display=swap" rel="stylesheet">
     
@@ -20,6 +20,11 @@
 <body>
     <h1> Parseltongue</h1>
 
+     
+      
+      
+    
+    
     <div class="container">
 
 
@@ -86,20 +91,58 @@
                 Code Output:
             </div>
             
-            <input type="button" value="Click Me" id="click_to_run_button">
-            
-            
-            
-            
-<!--
-<div class= "containerFlex">
-<img src="images/nagini.png" alt="Python" class="pic" > 
-<div class ="legendBox"> 
-            <p> ahahhaahha </p>
-            </div>
     
+               <div class="book-wrapper">
+    <div class="book-cover">
+<!--      <img src="images/bookcover.png" alt="">-->
+  
+    <div class="pages-container">
+      <div class="pages">
+        <div class="page-num-1">
+          <div class="pages-content">
+            <div class="pages-background"></div>
+            <div class="content-inner">
+              <h1>Chapter 1</h1>
+              <div class="text"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ea non vitae a assumenda sint quod, dolores laboriosam velit corrupti nobis cupiditate perspiciatis natus exercitationem, architecto esse ratione blanditiis! Itaque.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="page-num-2">
+          <div class="pages-content">
+            <div class="content-inner">
+              <h1>Chapter 2</h1>
+              <div class="text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, cumque autem! Magni eligendi qui officiis? Fugit iste voluptatum atque voluptatibus totam! Nisi accusantium saepe hic. Aut nobis nesciunt mollitia error.</p>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam odio modi, hic ratione fugit quod natus, excepturi quae minus voluptatum cupiditate quia magnam eveniet ex, reiciendis voluptates ipsam iste laudantium!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deserunt magnam, at perspiciatis aut. Voluptatem consequuntur neque quisquam?</p>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="page-num-3">
+          <div class="pages-content">
+            <div class="content-inner">
+              <h1>Chapter 3</h1>
+              <div class="text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate voluptas molestiae tempore amet adipisci dicta incidunt nisi alias distinctio fugit blanditiis dignissimos nobis deserunt eum consequuntur ipsam, perspiciatis numquam repellendus.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus in odio deserunt est hic minima inventore, mollitia, officia aspernatur eaque voluptatibus? Amet, molestias adipisci delectus ea eligendi sit numquam illo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-num-4">
+          <div class="pages-content">
+            <div class="content-inner">
+              <h1>The End</h1>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
--->
+  </div>
+          </div>   
+            
+            
             
 <div class="rowf">
   <div class="columno" >
@@ -146,16 +189,24 @@ double equals → ==</p>
 <p>slash → /</p>
 <p>
       
-      NUMBERS
-Numbers not valid for variable names
-All spoken numbers will be represented as integers
-Ex: three → 3
-Ex: one zero one → 101
-
+   <b> NUMBERS </b> </p>
       
-      </p>
+      <p>
+          Numbers not valid for variable names</p><p>
+      All spoken numbers will be represented as integers</p><p>
+      Ex: three → 3</p><p>
+      Ex: one zero one → 101</p>
+
+   
   </div>
 </div>
+            
+            
+            
+     
+            
+            
+            
      
             
             
@@ -166,7 +217,12 @@ Ex: one zero one → 101
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="lib/bundle.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script><script  src="scriptBook.js"></script>
+            
+            
+            
             <script>
+                
                 setInterval(function () {
                     $('.text-anim').toggleClass('animate');
                 }, 4000);
