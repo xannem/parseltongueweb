@@ -33,6 +33,7 @@
     "child_process": "^1.0.2",
     "local-web-server": "^3.0.6",
     "microphone-stream": "^5.0.1",
+    "python-shell": "^1.0.8",
     "query-string": "^6.8.1"
   },
   "devDependencies": {
