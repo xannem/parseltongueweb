@@ -250,10 +250,12 @@ body {
 }
 
 #transcript {
-    margin: 30px 0;
+  margin-top:5px;
     white-space: pre-wrap;
-    display: none;
+    font-family: 'Jim Nightshade', cursive;
+   height:90px;
 }
+
 
 #message {
     display: none;
@@ -299,7 +301,7 @@ margin:20px;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
     color: darkslategrey;
-    font-size:40px;
+    font-size:32px;
     font-family: 'Jim Nightshade', cursive;
 
 }
