@@ -2,7 +2,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Amazon Transcribe WebSocket API - Sample Application</title>
+    <title>ParselTongue</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
@@ -10,12 +11,20 @@
 
     <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="favicon.ico" /> 
 </head>
 
 <body>
         <h1> Parseltongue</h1> 
-    
 
+    
+    
+    
+    
+    
+    
+    
     
         <div class = "container"> 
             
@@ -87,8 +96,71 @@
     <div class = "resultBox"> 
             Code Output:
             </div>
+            
+            <input type="button" value="Click Me" id="click_to_run_button">
+            
+            
+            
+            
+<!--
+<div class= "containerFlex">
+<img src="images/nagini.png" alt="Python" class="pic" > 
+<div class ="legendBox"> 
+            <p> ahahhaahha </p>
+            </div>
+    
+    </div>
+-->
+            
+<div class="rowf">
+  <div class="columno" >
+ <img src="images/nagini.png" alt="Python" class="pic" > 
+  </div>
+  <div class="columnf plus" id = "style-15" >
+    <h1>Key</h1>
 
+<p>enter → \n  </p>
+<p>newline → \n  </p>
+<p>quote → “  </p>
+<p>open parentheses → (</p>
+<p>close parentheses → )</p>
+<p>open curly → {</p>
+<p>close curly → }</p>
+<p>open square → [</p>
+<p>close square → ]</p>
+<p>delete → del</p>
+<p>length → len</p>
+<p>variable → var</p>
+<p>define → def</p>
+<p>dot → .</p>
+<p>comment → #</p>
+<p>else if → elif
+end if, end while, end for</p>
+<p>
+double equals → ==</p>
+<p>equals → =</p>
+<p>equal to → =</p>
+<p>less than → &lt; </p>
+<p>greater than → > </p>
+<p>plus → +</p>
+<p>minus → -</p>
+<p>divided by → /</p>
+<p>times → *</p>
+<p>mod → %</p>
+<p>underscore → _</p>
+<p>comma → ,</p>
+<p>colon → :</p>
+<p>semicolon → ;</p>
+<p>space → “ “</p>
+<p>tab → “    “</p>
+<p>backslash → \</p>
+<p>slash → /</p>
+
+  </div>
+</div>
      
+            
+            
     
     
 
@@ -113,17 +185,10 @@ var myVar = setInterval(myTimer, 300)
     
 
 function myTimer() {
- jQuery.get('words.txt', function(data) {
-  // document.getElementById('word').innerHTML = data;
-     //editor.session.setValue(tempString);     
+ jQuery.get('words.txt', function(data) {  
  });  
 }
     
-
-//    function manualMode() {
-//   clearInterval(myVar);
-//        editor.setTheme("ace/theme/monokai");
-//}
 
 
 
@@ -156,7 +221,8 @@ function manualMode() {
 </script>
 
 
-<input type="button" value="Click Me" id="click_to_run_button">
+
+            
 </body>
 
 </html>
