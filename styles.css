@@ -147,7 +147,7 @@ font-weight: 400;
 }
 
 #editor { 
-    height:500px;
+    height:300px;
     max-width:700px;
     margin:auto;
     
@@ -329,8 +329,9 @@ margin:20px;
 
 .pic {
 
-    width:350px;
-    
+    width:300px;
+    margin:10px;
+
 }
 
 
@@ -346,27 +347,24 @@ margin:20px;
 
 .rowf {
   display: flex;
-    margin-top:60px;
     margin-bottom: 100px;
 }
 
 /* Create two equal columns that sits next to each other */
 .columno {
   flex: 40%;
-  padding: 10px;
 
 }
 .columnf {
-  flex: 60%;
-  padding: 10px;
-
+  flex:60%;
 }
 
 .plus {
-    margin-left: 30px;
+    margin-left:30px;
 	float: left;
 	height: 300px;
-	width: 650px;
+    margin-right:60px;
+	width: 550px;
 	background: #e6ddc5;
 	overflow-y: scroll;
     padding:20px;
