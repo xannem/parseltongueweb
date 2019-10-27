@@ -8,155 +8,97 @@
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
     <link rel="stylesheet" href="styles.css">
 
-    <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Jim+Nightshade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade&display=swap" rel="stylesheet">
 </head>
 
 <body>
-        <h1> Parseltongue</h1> 
-    
+    <h1> Parseltongue</h1>
 
-    
-        <div class = "container"> 
-            
-            
-        <div class = "parchment"> <br>
-        <div class="text-anim">
-        <span>y</span>
-        <span>o</span>
-        <span>u</span>
-        <span>'</span>
-        <span>r</span>
-        <span>e</span>
-        <span>&nbsp;</span> 
-        <span>a </span>
-        <span>&nbsp;</span> 
-        <span>c</span>
-        <span>o</span>
-        <span>d</span>
-        <span>i</span>
-        <span>n</span>
-        <span>g</span>
-        <span>&nbsp;</span>
-        <span>w</span>
-        <span>i</span>
-        <span>z</span>
-        <span>a</span>
-        <span>r</span>
-        <span>d</span>               
-        </div> 
-        <br>
-        <p id="word"></p>
-            
+    <div class="container">
+
+
+        <div class="parchment"> <br>
+            <div class="text-anim">
+                <span>y</span>
+                <span>o</span>
+                <span>u</span>
+                <span>'</span>
+                <span>r</span>
+                <span>e</span>
+                <span>&nbsp;</span>
+                <span>a </span>
+                <span>&nbsp;</span>
+                <span>c</span>
+                <span>o</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+                <span>&nbsp;</span>
+                <span>w</span>
+                <span>i</span>
+                <span>z</span>
+                <span>a</span>
+                <span>r</span>
+                <span>d</span>
+            </div>
+            <br>
+            <p id="word"></p>
+
             <div class="row">
-            <div class="col">
-                <button id="start-button" class="button-xl" title="Start Transcription">
-                    <i class="fa fa-microphone"></i> Speak
-                </button>
-                <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true"><i
-                        class="fa fa-stop-circle"></i> Stop
-                </button>
-                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript"> 
-                    Clear Transcript
-                </button>
-            </div>
-            
-               <div id="error" class="isa_error"></div>
-            
-              <textarea id="transcript" placeholder="Press Speak and speak into your mic" rows="5"
-            readonly="readonly"></textarea>
-            
-       
-            <textarea id="message" rows="5"
-        readonly="readonly"></textarea>  
-      
-        
-        </div>
+                <div class="col">
+                    <button id="start-button" class="button-xl" title="Start Transcription">
+                        <i class="fa fa-microphone"></i> Speak
+                    </button>
+                    <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true"><i
+                            class="fa fa-stop-circle"></i> Stop
+                    </button>
+                    <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript">
+                        Clear Transcript
+                    </button>
+                </div>
 
-            
-         <br>
-            
-            
-            
-        <div id="editor" class="editor"> print("python")</div>
-            
-            
-      <h2 class = "run"> Run Code 
-   </h2>
-            
-    <div class = "resultBox"> 
-            Code Output:
+                <div id="error" class="isa_error"></div>
+
+                <textarea id="transcript" placeholder="Press Speak and speak into your mic" rows="5"
+                    readonly="readonly"></textarea>
+
+
+                <textarea id="message" rows="5" readonly="readonly"></textarea>
+
             </div>
 
-     
-    
-    
+            <br>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="lib/bundle.js"></script>
-<script>  
-    setInterval(function(){ 
-   $('.text-anim').toggleClass('animate');
-  },4000);
+            <div id="editor" class="editor"> print("python")</div>
+
+
+            <h2 class="run"> Run Code
+            </h2>
+
+            <div class="resultBox">
+                Code Output:
+            </div>
+            <button id="click_to_run_button" class="button-xl">ClickMe</button>
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="lib/bundle.js"></script>
+            <script>
+                setInterval(function () {
+                    $('.text-anim').toggleClass('animate');
+                }, 4000);
             </script>
-    <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-    
-<script>
-    var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/merbivore_soft");
-    editor.session.setMode("ace/mode/python");
-   
-    
- tempString = "x = 5 \ny = 3 \n print(x+y)"
-var myVar = setInterval(myTimer, 300)
- 
-    
+            <script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
-function myTimer() {
- jQuery.get('words.txt', function(data) {
-  // document.getElementById('word').innerHTML = data;
-     //editor.session.setValue(tempString);     
- });  
-}
-    
-
-//    function manualMode() {
-//   clearInterval(myVar);
-//        editor.setTheme("ace/theme/monokai");
-//}
+            <script>
+                var editor = ace.edit("editor");
+                editor.setTheme("ace/theme/merbivore_soft");
+                editor.session.setMode("ace/mode/python");
+            </script>
 
 
-
-
-function manualMode() {
-    if (!myVar) {
-      
-        myVar = setInterval(myTimer,300);
-        
-        code = editor.getValue();
-        tempString = code;
-        editor.session.setValue(tempString);  
-
-   
-        
-        
-          editor.setTheme("ace/theme/merbivore_soft");
-        
-    } else {
-        clearInterval(myVar);
-        editor.setTheme("ace/theme/monokai");
-        
-        myVar = null;
-     
-    }
-}
-    
-      
-    
-</script>
-
-
-<input type="button" value="Click Me" id="click_to_run_button">
 </body>
 
 </html>
