@@ -315,7 +315,7 @@ margin:20px;
 }
 
 .resultBox {
-    background-color:#191919;
+
     height:200px;
     color:white;
     font-size:13px;
@@ -324,6 +324,7 @@ margin:20px;
     text-align: left;
     max-width:700px;
     margin:auto;
+   
 }
 
 .pic {

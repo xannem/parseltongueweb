@@ -26,9 +26,7 @@ img {
 }
 .pages [class^="page-num-"] {
 	background-image: url("images/paper.png");
-/*   background-size: auto 100%;*/
-    
-    width:;
+   background-size: auto 100%;
   position: relative;
 }
 
@@ -38,9 +36,18 @@ img {
     height: 100%;
     display: table;
     padding: 10%;
+   
   
 }
 
+.pages-content p {
+     font-size:17px;
+}
+
+.pages-content h1 {
+    color:black;
+    font-size:26px;
+}
 .content-inner {
     text-align: center;
     display: table-cell;
