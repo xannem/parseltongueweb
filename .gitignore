@@ -5,3 +5,5 @@ dist/
 lib/protected.sh
 
 .env
+
+*/bundle.js

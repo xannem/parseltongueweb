@@ -3,7 +3,8 @@
 var browserify = require('browserify');
 var envify = require('envify/custom');
 var fs = require('fs');
-var b = browserify('lib/main.js'), output = fs.createWriteStream('dist/main.js');
+var b = browserify('lib/main.js');
+var output = fs.createWriteStream('lib/bundle.js');
 
 b.transform(envify({
   ACCESS_KEY: process.env.ACCESS_KEY,
