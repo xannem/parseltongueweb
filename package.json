@@ -40,6 +40,7 @@
     "babelify": "^10.0.0",
     "dotenv": "^8.2.0",
     "envify": "^4.1.0",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "child-process": "^13.0.1"
   }
 }
