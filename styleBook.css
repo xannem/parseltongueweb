@@ -62,6 +62,7 @@ img {
     background-image: url("images/bookcover.png");
     background-size: contain;
     background-repeat: no-repeat;
+       user-select: none;
     
 }
 
