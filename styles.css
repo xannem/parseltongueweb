@@ -300,6 +300,9 @@ margin:20px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
+    background-color:transparent;
+    border:none; 
+    
     color: darkslategrey;
     font-size:32px;
     font-family: 'Jim Nightshade', cursive;
@@ -312,6 +315,7 @@ margin:20px;
   animation: neonRun 1.5s ease-in-out infinite alternate; 
     color: #fff; 
     cursor: pointer;
+    background-color: transparent;
 }
 
 .resultBox {
