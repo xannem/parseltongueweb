@@ -329,8 +329,10 @@ margin:20px;
 
 .pic {
 
-    width:300px;
-    margin:10px;
+    width:250px;
+    margin-left:10px;
+    margin-top:0px;
+    float: right;
 
 }
 
