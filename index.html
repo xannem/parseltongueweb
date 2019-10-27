@@ -46,42 +46,10 @@
             
         <p id="word"></p>
             
-              
-                <div class="toggle toggle--neon">
-                 
-                             
-                    <input type="checkbox" id="toggle--neon" class="toggle--checkbox">
-                    
-                    
-                    
-                    <label onclick="manualMode()" class="toggle--btn" for="toggle--neon" data-label-on="Write"  data-label-off="speak"></label>
-                  
-                </div>
-                
-            
-        <!--    <button onclick="manualMode()" class = "button"><p id = "buttonText"> Switch to Manual Typing Mode</p></button>-->
-        
-        <br><br>
-            
-            
-            
-        <div id="editor" class="editor"> print("python")</div>
-
-    <div class="container">
-        
-
-        <div id="error" class="isa_error"></div>
-
-        <textarea id="message" rows="5"
-        readonly="readonly"></textarea>
-
-        
-        <textarea id="transcript" placeholder="Press Start and speak into your mic" rows="5"
-            readonly="readonly"></textarea>
-        <div class="row">
+            <div class="row">
             <div class="col">
                 <button id="start-button" class="button-xl" title="Start Transcription">
-                    <i class="fa fa-microphone"></i> Start
+                    <i class="fa fa-microphone"></i> Speak
                 </button>
                 <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true"><i
                         class="fa fa-stop-circle"></i> Stop
@@ -91,9 +59,38 @@
                 </button>
             </div>
             
+               <div id="error" class="isa_error"></div>
+            
+              <textarea id="transcript" placeholder="Press Speak and speak into your mic" rows="5"
+            readonly="readonly"></textarea>
+            
+       
+            <textarea id="message" rows="5"
+        readonly="readonly"></textarea>  
+      
+        
         </div>
-    </div>
+            
+            
+            
+    <!--             
+       <div class="toggle toggle--neon">
+                    <input type="checkbox" id="toggle--neon" class="toggle--checkbox">
+                    <label onclick="manualMode()" class="toggle--btn" for="toggle--neon" data-label-on="Write"  data-label-off="speak"></label>
+          </div>
+            !--> 
+            
+        
+        <br><br>
+            
+            
+            
+        <div id="editor" class="editor"> print("python")</div>
 
+        
+
+     
+    
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

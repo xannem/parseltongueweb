@@ -32,9 +32,8 @@ background-color: #191C19;
 
 
 .parchment {
-     margin: auto;
+  margin: auto;
   width: 80%;
-    
     height:1100px;
     background-image: url(images/containerP.png); 
     background-repeat: no-repeat;
@@ -44,7 +43,7 @@ background-size:contain;
 }
 
 .parchment p {
-    
+        
     font-size: 24px;
     font-family: 'Jim Nightshade', cursive;
 
@@ -66,10 +65,8 @@ color:whitesmoke;
 
 .button {
   all:unset;
-    
   
 }
-
 
 
 .text-anim {
@@ -262,12 +259,50 @@ body {
 #transcript {
     margin: 30px 0;
     white-space: pre-wrap;
+    display: none;
+}
+
+#message {
+    display: none;
+}
+
+.row {
+    max-width:700px;
+    margin:auto;
+    
 }
 
 #start-button,
-#stop-button {
+#stop-button,
+#reset-button{
     margin: 5px 0;
+    background-color: transparent;
+    border:none; 
+    font-size: 44px;
+     font-family: 'Jim Nightshade', cursive;
+   font-weight: 400;
+    
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+      -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
 }
+
+@-webkit-keyframes neon1 {
+ 	 0% {
+		 text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 40px #f90, 0 0 70px #f90, 0 0 90px #f90, 0 0 90px #f90;
+	}
+	 100% {
+		 text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f90, 0 0 35px #f90, 0 0 40px #f90, 0 0 50px #f90;
+	}
+}
+
+
+
+
 
 #error {
     padding: 10px;
