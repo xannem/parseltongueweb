@@ -21,9 +21,8 @@
 body {
 background-color: #191C19;
     text-align: center;
-    
-    
-    
+      background-image: url("images/scale.png");
+  background-repeat: repeat;
 }
  
 
@@ -300,7 +299,60 @@ body {
 	}
 }
 
+.run {
+margin:20px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+    color: darkslategrey;
+    font-size:40px;
+    font-family: 'Jim Nightshade', cursive;
 
+}
+
+.run:hover {
+      -webkit-animation: neonRun 1.5s ease-in-out infinite alternate;
+  -moz-animation: neonRun 1.5s ease-in-out infinite alternate;
+  animation: neonRun 1.5s ease-in-out infinite alternate; 
+    color: #fff; 
+    cursor: pointer;
+}
+
+.resultBox {
+    background-color:#191919;
+    height:200px;
+    color:white;
+    font-size:13px;
+    font-family: 'Courier New', monospace;
+    padding:10px;
+    text-align: left;
+    max-width:700px;
+    margin:auto;
+}
+
+/*glow for webkit*/
+@-webkit-keyframes neonRun {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #B6FF00,
+               0 0 70px  #B6FF00,
+               0 0 80px  #B6FF00,
+               0 0 100px #B6FF00,
+               0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #B6FF00,
+               0 0 35px #B6FF00,
+               0 0 40px #B6FF00,
+               0 0 50px #B6FF00,
+               0 0 75px #B6FF00;
+  }
+}
 
 
 
