@@ -1,4 +1,4 @@
-//require('dotenv').config();
+require('dotenv').config();
 
 var browserify = require('browserify');
 var envify = require('envify/custom');
