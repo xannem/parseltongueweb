@@ -259,6 +259,11 @@ body {
 #transcript {
     margin: 30px 0;
     white-space: pre-wrap;
+    display: none;
+}
+
+#message {
+    display: none;
 }
 
 .row {
